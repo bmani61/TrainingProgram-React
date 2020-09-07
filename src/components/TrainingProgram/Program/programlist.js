@@ -2,7 +2,7 @@ import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
-//import Link from "../../link";
+import Link from "../../link";
 
 const ProgramList = ({ programs }) => {
   const list = programs.map((program) => {
@@ -23,7 +23,11 @@ const ProgramList = ({ programs }) => {
     <div className="container">
       <br />
       <br />
-      <div className="pull-right"></div>
+      <div className="pull-right">
+        <Link href="./create.js">
+          <button className="btn btn success">Create Progaram</button>
+        </Link>
+      </div>
       <table className="table table-hover">
         <thead>
           <tr>

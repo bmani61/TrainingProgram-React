@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ProgramList from "./programlist";
 import api from "../../../api/api";
+import Route from "../../route";
+import CreateProgram from "./create";
 const Programs = () => {
   const [programs, SetPrograms] = useState([]);
 
@@ -15,7 +17,12 @@ const Programs = () => {
 
   return (
     <div>
-      <ProgramList programs={programs} />
+      <Route path="/">
+        <ProgramList programs={programs} />
+      </Route>
+      <Route path="/create.js">
+        <CreateProgram />
+      </Route>
     </div>
   );
 };
